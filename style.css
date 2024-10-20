@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -65,8 +66,34 @@ button{
     outline: none;
     border-radius:5px;
     transition: .2s ease-in;
+    cursor: pointer;
 } 
 
 button:hover{
     background: #3f2968;
+}
+
+.login{
+    height: 460px;
+    background: #fff;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.login label{
+    color:#573b8a;
+    transform: scale(.6);
+}
+
+#checkbox:checked ~ .login{
+    transform: translateY(-500px);
+}
+
+#checkbox:checked ~ .login label{
+    transform: scale(1);
+}
+
+#checkbox:checked ~ .sign-up label{
+    transform: scale(.6);
 }
